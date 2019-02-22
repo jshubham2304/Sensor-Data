@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:id="@+id/toolbar"
+        android:background="@android:color/black">
+       <RelativeLayout
+           android:padding="5dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Add Condition"
+               android:textSize="22sp"
+               android:textStyle="bold"
+               android:textColor="@android:color/white"/>
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:onClick="onClickAddTask"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_file_upload_black_24dp"
+            android:layout_height="wrap_content" />
+       </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_below="@id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Statement"
+        android:inputType="textLongMessage"
+        android:id="@+id/editstatement"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="R Value"
+        android:inputType="number"
+        android:id="@+id/editR"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="G Value"
+        android:inputType="number"
+        android:id="@+id/editG"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="B value"
+        android:inputType="number"
+        android:id="@+id/editB"/>
+
+    <ImageView
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/img"
+        android:src="@drawable/ic_launcher_background"/>
+</LinearLayout>
+<Button
+    android:onClick="uploadImage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Select Image"
+    android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
